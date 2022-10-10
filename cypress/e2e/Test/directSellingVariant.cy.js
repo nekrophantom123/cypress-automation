@@ -15,7 +15,7 @@ describe('Test Direct Selling', () => {
         cy.get('input[name="user"]').type('jek@gmail.com')
         
         // enter password
-        cy.get('input[name="password"]').type('12345678')
+        cy.get('input[name="password"]').type('1234asdf')
 
         // click button login
         cy.get('.blue-gradient-background').click()

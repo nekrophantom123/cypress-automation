@@ -7,13 +7,13 @@ const multiple = { multiple: true };
 describe('Staging Reseller', () => {
     it('visit Staging marketport', () => {
         // cy.viewport(1440, 990)
-        cy.visit('https://staging.marketport.io')
+        cy.visit('https://app.marketport.io')
     })
     
     it('login marketport Reseller', () => {
         
         // enter email
-        cy.get('input[name="user"]').type('xense64@gmail.com')
+        cy.get('input[name="user"]').type('reynoldandika29@gmail.com')
         
         // enter password
         cy.get('input[name="password"]').type('12345678')

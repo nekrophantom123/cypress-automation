@@ -12,7 +12,7 @@ describe('Staging Reseller', () => {
     it('login marketport Relller', () => {
         
         // enter email
-        cy.get('input[name="user"]').type('greynoldandika@gmail.com')
+        cy.get('input[name="user"]').type('greynoldandika1@gmail.com')
         
         // enter password
         cy.get('input[name="password"]').type('12345678')

@@ -13,7 +13,7 @@ describe('Test Reseller', () => {
     it('login marketport Reseller', () => {
         
         // enter email
-        cy.get('input[name="user"]').type('3pl2@gmail.com')
+        cy.get('input[name="user"]').type('drop2@gmail.com')
         
         // enter password
         cy.get('input[name="password"]').type('12345678')
@@ -94,16 +94,16 @@ describe('Test Reseller', () => {
         cy.get('[data-key="item3lazada"] > .AddProduct_catLevelWrapperSalesChannel__2Bz9d > :nth-child(2)').click()
         cy.get('.css-1hwfws3').type('No Warranty{enter}')
 
-        // tokopedia
-        cy.get(':nth-child(3) > .py-2 > .col-lg-9 > .d-flex > .form-check > #marketport-fee').click()
-        cy.get(':nth-child(3) > .py-2 > .col-lg-9 > .d-flex > :nth-child(2) > :nth-child(1) > .AddProduct_subDetailList__376HR').click()
-        cy.get('[data-key="item1shopee"] > .AddProduct_catLevelWrapperSalesChannel__2Bz9d > :nth-child(31) > .theme-primary-color').click()
-        cy.get('[data-key="item2shopee"] > .AddProduct_catLevelWrapperSalesChannel__2Bz9d > :nth-child(12)').click()
-        // mandatory attribute
-        cy.get(':nth-child(3) > .py-2 > .col-lg-9 > .flex-column > :nth-child(2) > :nth-child(4) > .col-md-8 > .form-group > .css-2b097c-container > .css-yk16xz-control > .css-1hwfws3').click().type('14 Inches{enter}')
-        cy.get(':nth-child(5) > .col-md-8 > .form-group > .css-2b097c-container > .css-yk16xz-control > .css-1hwfws3').click().type('Gaming{enter}')
-        cy.get(':nth-child(6) > .col-md-8 > .form-group > .css-2b097c-container > .css-yk16xz-control > .css-1hwfws3').click().type('12 Months{enter}')
-        cy.get(':nth-child(7) > .col-md-8 > .form-group > .css-2b097c-container > .css-yk16xz-control > .css-1hwfws3').click().type('Supplier Warranty{enter}')
+        // // Shopee
+        // cy.get(':nth-child(3) > .py-2 > .col-lg-9 > .d-flex > .form-check > #marketport-fee').click()
+        // cy.get(':nth-child(3) > .py-2 > .col-lg-9 > .d-flex > :nth-child(2) > :nth-child(1) > .AddProduct_subDetailList__376HR').click()
+        // cy.get('[data-key="item1shopee"] > .AddProduct_catLevelWrapperSalesChannel__2Bz9d > :nth-child(31) > .theme-primary-color').click()
+        // cy.get('[data-key="item2shopee"] > .AddProduct_catLevelWrapperSalesChannel__2Bz9d > :nth-child(12)').click()
+        // // mandatory attribute
+        // cy.get(':nth-child(3) > .py-2 > .col-lg-9 > .flex-column > :nth-child(2) > :nth-child(4) > .col-md-8 > .form-group > .css-2b097c-container > .css-yk16xz-control > .css-1hwfws3').click().type('14 Inches{enter}')
+        // cy.get(':nth-child(5) > .col-md-8 > .form-group > .css-2b097c-container > .css-yk16xz-control > .css-1hwfws3').click().type('Gaming{enter}')
+        // cy.get(':nth-child(6) > .col-md-8 > .form-group > .css-2b097c-container > .css-yk16xz-control > .css-1hwfws3').click().type('12 Months{enter}')
+        // cy.get(':nth-child(7) > .col-md-8 > .form-group > .css-2b097c-container > .css-yk16xz-control > .css-1hwfws3').click().type('Supplier Warranty{enter}')
 
         // tokopedia
         cy.get(':nth-child(4) > .py-2 > .col-lg-9 > .d-flex > .form-check > #marketport-fee').click()

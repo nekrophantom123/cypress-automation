@@ -182,10 +182,10 @@ describe('Test Reseller', () => {
         // set color Lazada
         cy.get('.bg-white > .variant-card > .lazada-variant-card > .d-flex > .attribute-variant > .form-group > .form-control').select('GOLD')
        
-        // set Shopee
-        cy.get('.bg-white > .variant-card > .AddProduct_salesChannelsTab__3Lo0p > .false.me-3').click()
-        // set color Shopee
-        cy.get('.shopee-variant-card > .d-flex > .attribute-variant > .form-group > .form-control').select('Duke blue')
+        // // set Shopee
+        // cy.get('.bg-white > .variant-card > .AddProduct_salesChannelsTab__3Lo0p > .false.me-3').click()
+        // // set color Shopee
+        // cy.get('.shopee-variant-card > .d-flex > .attribute-variant > .form-group > .form-control').select('Duke blue')
 
         // set Tokopedia
         cy.get('.bg-white > .variant-card > .AddProduct_salesChannelsTab__3Lo0p > :nth-child(3)').click()
