@@ -12,10 +12,10 @@ describe('Test Reseller', () => {
     it('login marketport Relller', () => {
         
         // enter email
-        cy.get('input[name="user"]').type('3pl2@gmail.com')
+        cy.get('input[name="user"]').type('drop2@gmail.com')
         
         // enter password
-        cy.get('input[name="password"]').type('12345678')
+        cy.get('input[name="password"]').type('1234asdf')
 
         // click button login
         cy.get('.blue-gradient-background').click()
@@ -69,7 +69,7 @@ describe('Test Reseller', () => {
 
         // add QTY
         const qty =  Math.ceil(Math.random() * 100);
-        cy.get('input[name="qty_in_warehouse"]').type(qty, force)
+        cy.get(':nth-child(2) > .rounded-4').type(qty, force)
 
         // add dimensions & weight
         const dimensions = Math.ceil(Math.random() * 11)
@@ -86,11 +86,13 @@ describe('Test Reseller', () => {
         // lazada
         cy.get(':nth-child(2) > .py-2 > .col-lg-9 > .d-flex > .form-check > #marketport-fee').click()
         cy.get(':nth-child(2) > .py-2 > .col-lg-9 > .d-flex > :nth-child(2) > :nth-child(1) > .AddProduct_subDetailList__376HR').click()
-        cy.get(':nth-child(2) > .py-2 > .col-lg-9 > .d-flex > :nth-child(2) > :nth-child(1) > .AddProduct_categoryListWrapperSalesChannel__RmW5t > .AddProduct_categoryList__1M2Bj > .react-horizontal-scrolling-menu--wrapper > .react-horizontal-scrolling-menu--scroll-container > .react-horizontal-scrolling-menu--item > .AddProduct_catLevelWrapperSalesChannel__2Bz9d > :nth-child(16)').click(force)
-        cy.get('[data-key="item2lazada"] > .AddProduct_catLevelWrapperSalesChannel__2Bz9d > :nth-child(4)').click()
-        // mandatory attribute
+        cy.get('[data-key="item1lazada"] > .AddProduct_catLevelWrapperSalesChannel__2Bz9d > :nth-child(2)').click(force)
+        cy.get('[data-key="item2lazada"] > .AddProduct_catLevelWrapperSalesChannel__2Bz9d > :nth-child(2)').click()
         cy.get('[data-key="item3lazada"] > .AddProduct_catLevelWrapperSalesChannel__2Bz9d > :nth-child(2)').click()
-        cy.get('.css-1hwfws3').type('No Warranty{enter}')
+        // cy.get('[data-key="item2lazada"] > .AddProduct_catLevelWrapperSalesChannel__2Bz9d > :nth-child(4)').click()
+        // // mandatory attribute
+        // cy.get('[data-key="item3lazada"] > .AddProduct_catLevelWrapperSalesChannel__2Bz9d > :nth-child(2)').click()
+        // cy.get('.css-1hwfws3').type('No Warranty{enter}')
 
         // tokopedia
         cy.get(':nth-child(3) > .py-2 > .col-lg-9 > .d-flex > .form-check > #marketport-fee').click()
@@ -134,7 +136,7 @@ describe('Test Reseller', () => {
         cy.get('.MultiSelect_inputField__eKJ97').click()
         cy.get('.MultiSelect_dropdownItem__3YLPa').click()
         // add stock
-        cy.get('.d-flex > :nth-child(2) > .text-input').clear().type(qty, force)
+        cy.get('.d-flex > :nth-child(2) > .rounded-4').clear().type(qty, force)
         
         // set Lazada
         // set color lazada
@@ -176,7 +178,7 @@ describe('Test Reseller', () => {
         cy.get('.w-75 > .MultiSelect_MultiSelectWrapper__1j1NE > .MultiSelect_inputField__eKJ97').click()   
         cy.get('.w-75 > .MultiSelect_MultiSelectWrapper__1j1NE > .MultiSelect_dropdownMenu__2t-0_ > .MultiSelect_dropdownItem__3YLPa').click()
         // add stock
-        cy.get('.col-lg-9 > .d-flex > :nth-child(2) > .text-input').clear().type(qty, force)
+        cy.get('.col-lg-9 > .d-flex > :nth-child(2) > .rounded-4').clear().type(qty, force)
         
         // set lazada
         // set color Lazada

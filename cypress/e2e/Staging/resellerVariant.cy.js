@@ -12,7 +12,7 @@ describe('Staging Reseller', () => {
     it('login marketport Relller', () => {
         
         // enter email
-        cy.get('input[name="user"]').type('greynoldandika1@gmail.com')
+        cy.get('input[name="user"]').type('greynoldandika@gmail.com')
         
         // enter password
         cy.get('input[name="password"]').type('12345678')
@@ -69,7 +69,7 @@ describe('Staging Reseller', () => {
 
         // add QTY
         const qty =  Math.ceil(Math.random() * 100);
-        cy.get('input[name="qty_in_warehouse"]').type(qty, force)
+        cy.get(':nth-child(2) > .rounded-4').type(qty, force)
 
         // add dimensions & weight
         const dimensions = Math.ceil(Math.random() * 11)

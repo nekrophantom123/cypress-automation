@@ -82,7 +82,7 @@ describe('Staging Reseller', () => {
         // scroll down
         cy.scrollTo(0, 2000)
 
-        cy.wait(30000)
+        cy.wait(10000)
 
         // Sales channel 
         // lazada
@@ -97,20 +97,28 @@ describe('Staging Reseller', () => {
         // tokopedia
         cy.get(':nth-child(3) > .py-2 > .col-lg-9 > .d-flex > .form-check > #marketport-fee').click()
         cy.get(':nth-child(3) > .py-2 > .col-lg-9 > .d-flex > :nth-child(2) > :nth-child(1) > .AddProduct_subDetailList__376HR').click()
-        cy.get('[data-key="item1shopee"] > .AddProduct_catLevelWrapperSalesChannel__2Bz9d > :nth-child(31) > .theme-primary-color').click()
-        cy.get('[data-key="item2shopee"] > .AddProduct_catLevelWrapperSalesChannel__2Bz9d > :nth-child(12)').click()
-        // mandatory attribute
-        cy.get(':nth-child(3) > .py-2 > .col-lg-9 > .flex-column > :nth-child(2) > :nth-child(4) > .col-md-8 > .form-group > .css-2b097c-container > .css-yk16xz-control > .css-1hwfws3').click().type('14 Inches{enter}')
-        cy.get(':nth-child(5) > .col-md-8 > .form-group > .css-2b097c-container > .css-yk16xz-control > .css-1hwfws3').click().type('Gaming{enter}')
-        cy.get(':nth-child(6) > .col-md-8 > .form-group > .css-2b097c-container > .css-yk16xz-control > .css-1hwfws3').click().type('12 Months{enter}')
-        cy.get(':nth-child(7) > .col-md-8 > .form-group > .css-2b097c-container > .css-yk16xz-control > .css-1hwfws3').click().type('Supplier Warranty{enter}')
+        // cy.get('[data-key="item1shopee"] > .AddProduct_catLevelWrapperSalesChannel__2Bz9d > :nth-child(31) > .theme-primary-color').click()
+        // cy.get('[data-key="item2shopee"] > .AddProduct_catLevelWrapperSalesChannel__2Bz9d > :nth-child(12)').click()
+        // // mandatory attribute
+        // cy.get(':nth-child(3) > .py-2 > .col-lg-9 > .flex-column > :nth-child(2) > :nth-child(4) > .col-md-8 > .form-group > .css-2b097c-container > .css-yk16xz-control > .css-1hwfws3').click().type('14 Inches{enter}')
+        // cy.get(':nth-child(5) > .col-md-8 > .form-group > .css-2b097c-container > .css-yk16xz-control > .css-1hwfws3').click().type('Gaming{enter}')
+        // cy.get(':nth-child(6) > .col-md-8 > .form-group > .css-2b097c-container > .css-yk16xz-control > .css-1hwfws3').click().type('12 Months{enter}')
+        // cy.get(':nth-child(7) > .col-md-8 > .form-group > .css-2b097c-container > .css-yk16xz-control > .css-1hwfws3').click().type('Supplier Warranty{enter}')
 
         // tokopedia
-        cy.get(':nth-child(4) > .py-2 > .col-lg-9 > .d-flex > .form-check > #marketport-fee').click()
-        cy.get(':nth-child(4) > .py-2 > .col-lg-9 > .d-flex > :nth-child(2) > :nth-child(1) > .AddProduct_subDetailList__376HR').click()
-        cy.get(':nth-child(4) > .py-2 > .col-lg-9 > .d-flex > :nth-child(2) > :nth-child(1) > .AddProduct_categoryListWrapperSalesChannel__RmW5t > .AddProduct_categoryList__1M2Bj > .react-horizontal-scrolling-menu--wrapper > .react-horizontal-scrolling-menu--scroll-container > .react-horizontal-scrolling-menu--item > .AddProduct_catLevelWrapperSalesChannel__2Bz9d > :nth-child(4)').click()
+        // cy.get(':nth-child(4) > .py-2 > .col-lg-9 > .d-flex > .form-check > #marketport-fee').click()
+        // cy.get(':nth-child(4) > .py-2 > .col-lg-9 > .d-flex > :nth-child(2) > :nth-child(1) > .AddProduct_subDetailList__376HR').click()
+        // cy.get(':nth-child(4) > .py-2 > .col-lg-9 > .d-flex > :nth-child(2) > :nth-child(1) > .AddProduct_categoryListWrapperSalesChannel__RmW5t > .AddProduct_categoryList__1M2Bj > .react-horizontal-scrolling-menu--wrapper > .react-horizontal-scrolling-menu--scroll-container > .react-horizontal-scrolling-menu--item > .AddProduct_catLevelWrapperSalesChannel__2Bz9d > :nth-child(4)').click()
+        // cy.get('[data-key="item2tokopedia"] > .AddProduct_catLevelWrapperSalesChannel__2Bz9d > :nth-child(2) > .theme-primary-color').click()
+        // cy.get('[data-key="item3tokopedia"] > .AddProduct_catLevelWrapperSalesChannel__2Bz9d > :nth-child(2)').click()
+
+        // if shopee havnet
+        cy.get(':nth-child(3) > .py-2 > .col-lg-9 > .d-flex > :nth-child(2) > :nth-child(1) > .AddProduct_subDetailList__376HR').click()
+        cy.get(':nth-child(3) > .py-2 > .col-lg-9 > .d-flex > :nth-child(2) > :nth-child(1) > .AddProduct_categoryListWrapperSalesChannel__RmW5t > .AddProduct_categoryList__1M2Bj > .react-horizontal-scrolling-menu--wrapper > .react-horizontal-scrolling-menu--scroll-container > .react-horizontal-scrolling-menu--item > .AddProduct_catLevelWrapperSalesChannel__2Bz9d > :nth-child(4)').click()
         cy.get('[data-key="item2tokopedia"] > .AddProduct_catLevelWrapperSalesChannel__2Bz9d > :nth-child(2) > .theme-primary-color').click()
         cy.get('[data-key="item3tokopedia"] > .AddProduct_catLevelWrapperSalesChannel__2Bz9d > :nth-child(2)').click()
+
+
 
         // click button add variant
         cy.get('#add-variant-button').click()

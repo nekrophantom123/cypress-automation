@@ -84,7 +84,7 @@ describe('Staging Reseller', () => {
         // scroll down
         cy.scrollTo(0, 2000)
         
-        cy.wait(30000)
+        cy.wait(10000)
         
         // Sales channel 
         // lazada

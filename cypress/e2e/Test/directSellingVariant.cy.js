@@ -73,7 +73,7 @@ describe('Test Direct Selling', () => {
 
         // add QTY
         const qty =  Math.ceil(Math.random() * 100);
-        cy.get('input[name="qty_in_warehouse"]').type(qty, force)
+        cy.get(':nth-child(2) > .rounded-4').type(qty, force)
 
         // add dimensions & weight
         const dimensions = Math.ceil(Math.random() * 11)
@@ -139,7 +139,7 @@ describe('Test Direct Selling', () => {
         cy.get('.MultiSelect_inputField__eKJ97').click()
         cy.get('.MultiSelect_dropdownItem__3YLPa').click()
         // add stock
-        cy.get('.d-flex > :nth-child(2) > .text-input').clear().type(qty, force)
+        cy.get('.d-flex > :nth-child(2) > .rounded-4').clear().type(qty, force)
      
         // set Lazada
         // set color lazada
@@ -182,7 +182,7 @@ describe('Test Direct Selling', () => {
         cy.get('.w-75 > .MultiSelect_MultiSelectWrapper__1j1NE > .MultiSelect_inputField__eKJ97').click()   
         cy.get('#37').click()
         // add stock
-        cy.get('.col-lg-9 > .d-flex > :nth-child(2) > .text-input').clear().type(qty, force)
+        cy.get('.col-lg-9 > .d-flex > :nth-child(2) > .rounded-4').clear().type(qty, force)
        
         // set lazada
         // set color Lazada

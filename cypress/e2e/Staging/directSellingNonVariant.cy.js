@@ -12,7 +12,7 @@ describe('Staging Direct Selling', () => {
     it('login marketport Direct Selling', () => {
         
         // enter email
-        cy.get('input[name="user"]').type('xense641@gmail.com')
+        cy.get('input[name="user"]').type('favian@central-bpn.com')
         
         // enter password
         cy.get('input[name="password"]').type('12345678')
@@ -73,7 +73,7 @@ describe('Staging Direct Selling', () => {
 
         // add QTY
         const qty =  Math.ceil(Math.random() * 100);
-        cy.get('input[name="qty_in_warehouse"]').type(qty, force)
+        cy.get(':nth-child(2) > .rounded-4').type(qty, force)
 
         // add dimensions & weight
         const dimensions = Math.ceil(Math.random() * 11)
